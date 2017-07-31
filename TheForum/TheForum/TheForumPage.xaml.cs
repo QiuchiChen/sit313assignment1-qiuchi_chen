@@ -8,22 +8,36 @@ namespace TheForum
 		{
 			InitializeComponent();
 
-			Title = "Qiuchi`s Forum";
+            Title = "Qiuchi`s Forum";
+
+
+            BackgroundColor = Color.Black;
 
 			Content = new Frame
 			{
-				Content = new Label { Text = "I'm Framous!" },
-				OutlineColor = Color.Silver,
-				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HorizontalOptions = LayoutOptions.Center
+
+
+				Content = new Label
+				{
+					Text = "Qiuchi`s Forum!",
+                    TextColor = Color.NavajoWhite,
+					FontSize = 30,
+					HorizontalOptions = LayoutOptions.Center,
+                    FontAttributes = FontAttributes.Bold,
+                },
+
+                OutlineColor = Color.White,
+
+				
 			};
 
 
 			var label = new Label
 			{
 				Text = "Welcome!! And have a good time!!",
-				TextColor = Color.NavajoWhite,
-				BackgroundColor = Color.Black
+                TextColor = Color.White,
+                BackgroundColor = Color.Silver,
+                                       
 			};
 
 			var tableview = new TableView

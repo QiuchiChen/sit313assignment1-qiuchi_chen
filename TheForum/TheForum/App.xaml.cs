@@ -7,12 +7,15 @@ namespace TheForum
         public App()
         {
             InitializeComponent();
+           
 
             MainPage = new NavigationPage(new TabbedPage()
-            
+ 
             { Children = {
+                    
+                    new LoginPage() ,
                     new TheForumPage (),
-                    new LoginPage() 
+                    new settings(),
 
 
                 }

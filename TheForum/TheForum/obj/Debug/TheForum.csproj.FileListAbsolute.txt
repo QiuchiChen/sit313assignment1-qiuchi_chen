@@ -37,3 +37,4 @@
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.LoginPage.xaml.g.cs
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.dll
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.pdb
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.settings.xaml.g.cs
