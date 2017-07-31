@@ -11,7 +11,7 @@
 namespace TheForum {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/chenqiuchi/Desktop/TheForum/TheForum/App.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

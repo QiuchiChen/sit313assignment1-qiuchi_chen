@@ -11,12 +11,12 @@
 namespace TheForum {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/TheForumPage.xaml")]
-    public partial class TheForumPage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/LoginPage.xaml")]
+    public partial class LoginPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(TheForumPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LoginPage));
         }
     }
 }

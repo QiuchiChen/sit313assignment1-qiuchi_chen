@@ -1,4 +1,4 @@
-﻿using Xamarin.Forms;
+﻿﻿using Xamarin.Forms;
 
 namespace TheForum
 {
@@ -8,7 +8,17 @@ namespace TheForum
         {
             InitializeComponent();
 
-            MainPage = new TheForumPage();
+            MainPage = new NavigationPage(new TabbedPage()
+            
+            { Children = {
+                    new TheForumPage (),
+                    new LoginPage() 
+
+
+                }
+            });
+
+
         }
 
         protected override void OnStart()
