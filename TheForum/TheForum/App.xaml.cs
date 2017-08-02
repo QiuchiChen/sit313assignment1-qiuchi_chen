@@ -12,9 +12,9 @@ namespace TheForum
             MainPage = new NavigationPage(new TabbedPage()
  
             { Children = {
-                    
+					 new TheForumPage (),
                     new LoginPage() ,
-                    new TheForumPage (),
+                   
                     new settings(),
 
 

@@ -7,11 +7,12 @@ namespace TheForum
         public TheForumPage()
 		{
 			InitializeComponent();
+            BackgroundColor = Color.Black;
 
             Title = "Qiuchi`s Forum";
 
 
-            BackgroundColor = Color.Black;
+
 
 			Content = new Frame
 			{
@@ -39,6 +40,9 @@ namespace TheForum
                 BackgroundColor = Color.Silver,
                                        
 			};
+
+
+
 
 			var tableview = new TableView
 			{
