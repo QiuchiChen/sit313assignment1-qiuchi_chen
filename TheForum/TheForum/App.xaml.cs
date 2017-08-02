@@ -15,7 +15,7 @@ namespace TheForum
 					 new TheForumPage (),
                     new LoginPage() ,
                    
-                    new settings(),
+                    //new settings(),
 
 
                 }

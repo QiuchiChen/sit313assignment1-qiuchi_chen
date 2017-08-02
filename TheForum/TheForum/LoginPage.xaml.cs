@@ -14,7 +14,7 @@ namespace TheForum
         public LoginPage()
         {
 			InitializeComponent();
-			Title = "Account";
+			Title = "LogIn";
             BackgroundColor = Color.Black;
 
 
@@ -100,8 +100,18 @@ namespace TheForum
             if (user== username.Text && pass==password.Text)
 			{   // Logged in and move to new page
                 await DisplayAlert("Login sucsses", "Moving to the new page.", "Ok");
-				await Navigation.PushAsync(new NavigationPage(new InAccountPage()));
+				await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
+
+				{
+					Children = {
+					 new TheForumPage (),
+                     new settings(),
+
+
+                }
+                }));
 			}
+
 			else
 			{
 				//Show Alert for error check
