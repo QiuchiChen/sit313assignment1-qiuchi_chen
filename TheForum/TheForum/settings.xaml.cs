@@ -39,7 +39,7 @@ namespace TheForum
             NewpostButton.Clicked += Newpost;
 
 
-			////Create logout button
+		//Create logout button
 			Button logoutButton = new Button
 			{
 				Text = "Logout",
@@ -64,7 +64,7 @@ namespace TheForum
 
 			async void loggedout(object sender, EventArgs e)
 			{
-				await Navigation.PushAsync(new NavigationPage(new TabbedPage()
+                await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
 
 				{
 					Children = {

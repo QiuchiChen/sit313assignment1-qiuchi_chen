@@ -59,7 +59,7 @@ namespace TheForum
 
 			async void newpost(object sender, EventArgs e)
 			{
-				await Navigation.PushAsync(new NavigationPage(new TabbedPage()
+				await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
 
 				{
 					Children = {

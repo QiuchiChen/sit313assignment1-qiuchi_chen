@@ -41,6 +41,12 @@
     <EmbeddedResource Include="RegisterPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Replypage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForumList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -61,6 +67,12 @@
     </Compile>
     <Compile Include="RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Replypage.xaml.cs">
+      <DependentUpon>Replypage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ForumList.xaml.cs">
+      <DependentUpon>ForumList.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
