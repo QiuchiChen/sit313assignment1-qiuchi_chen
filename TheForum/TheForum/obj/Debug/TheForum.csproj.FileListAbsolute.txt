@@ -42,3 +42,5 @@
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.RegisterPage.xaml.g.cs
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.Replypage.xaml.g.cs
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.ForumList.xaml.g.cs
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/Newtonsoft.Json.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/Newtonsoft.Json.xml
