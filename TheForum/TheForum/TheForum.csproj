@@ -74,6 +74,7 @@
     <Compile Include="ForumList.xaml.cs">
       <DependentUpon>ForumList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserWebRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

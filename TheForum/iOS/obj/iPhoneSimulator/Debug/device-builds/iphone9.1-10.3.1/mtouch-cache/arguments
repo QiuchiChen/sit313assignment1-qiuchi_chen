@@ -317,6 +317,8 @@
 	-r \
 	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
 	-r \
+	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/Newtonsoft.Json.dll \
+	-r \
 	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
 	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/Xamarin.Forms.2.3.4.231/lib/Xamarin.iOS10/ca/Xamarin.Forms.Platform.iOS.resources.dll \

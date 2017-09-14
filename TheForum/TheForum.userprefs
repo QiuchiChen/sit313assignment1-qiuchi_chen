@@ -1,22 +1,9 @@
 ﻿<Properties StartupConfiguration="{0314AB06-7AD3-4540-AD84-F847EA2D7EF3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheForum/TheForumPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheForum/LoginPage.xaml.cs">
     <Files>
-      <File FileName="TheForum/TheForumPage.xaml.cs" Line="183" Column="1" />
-      <File FileName="TheForum/LoginPage.xaml.cs" Line="88" Column="18" />
-      <File FileName="TheForum/RegisterPage.xaml.cs" Line="28" Column="13" />
-      <File FileName="TheForum/settings.xaml.cs" Line="74" Column="38" />
-      <File FileName="TheForum/InAccountPage.xaml.cs" Line="13" Column="13" />
-      <File FileName="TheForum/App.xaml.cs" Line="16" Column="38" />
-      <File FileName="TheForum/settings.xaml" Line="10" Column="1" />
-      <File FileName="TheForum/App.xaml" Line="7" Column="1" />
-      <File FileName="TheForum/InAccountPage.xaml" Line="6" Column="1" />
-      <File FileName="TheForum/Replypage.xaml" Line="6" Column="1" />
-      <File FileName="TheForum/Replypage.xaml.cs" Line="13" Column="34" />
-      <File FileName="TheForum/ForumList.xaml" Line="6" Column="1" />
-      <File FileName="TheForum/ForumList.xaml.cs" Line="67" Column="17" />
-      <File FileName="TheForum/LoginPage.xaml" Line="9" Column="1" />
-      <File FileName="TheForum/RegisterPage.xaml" Line="6" Column="1" />
-      <File FileName="TheForum/TheForumPage.xaml" Line="12" Column="1" />
+      <File FileName="TheForum/UserWebRequest.cs" Line="72" Column="7" />
+      <File FileName="TheForum/RegisterPage.xaml.cs" Line="107" Column="17" />
+      <File FileName="TheForum/LoginPage.xaml.cs" Line="120" Column="103" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.TheForum.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1A7E80E3-C447-4BCB-914B-34A14AEF28BA" />

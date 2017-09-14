@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using System.Diagnostics;
 
 namespace TheForum
 {
@@ -99,6 +100,14 @@ namespace TheForum
 				
 				// sign up done and moving to new page
 				await DisplayAlert("Sign up sucsses", "Please sign in at the Login Page.", "Ok");
+
+
+                UserWebRequest user = UserWebRequest.CreateUserFromJson("{\"username\":\"" + username.Text + "\", \"password\":\"" + password.Text + "\"}");
+                user.Save();
+
+                Debug.WriteLine(user);
+                 
+
 				await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
 
 				{
