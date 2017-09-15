@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Diagnostics;
 using Xamarin.Forms;
 
 namespace TheForum
@@ -44,23 +44,15 @@ namespace TheForum
             //Load the json from datastore
             UserWebRequest request = new UserWebRequest();
             string afterRequest = await request.GetPost();
-
-
-
-			var topic = new[]{
-                
-                new {afterRequest}
-            };
-
-
-            listView.ItemsSource = topic;
-
+            //Json convert to list
+            JsonString jstring = new JsonString();
+            //Add to listview
+            listView.ItemsSource = jstring.ConvertToList(afterRequest); ;
         }
 
         public ForumList()
         {
-            InitializeComponent();
-
+         
             LoadData();
 
 			var label = new Label
@@ -108,7 +100,10 @@ namespace TheForum
             listView.SelectedItem = null;
 
 			await DisplayAlert("Loading", "Moving to view the detail and reply", "Ok");
-            await Navigation.PushAsync(new Replypage());
+            await Navigation.PushAsync(new Replypage()
+            {
+                BindingContext = e.SelectedItem as Items
+            });
 		}
     }
 }

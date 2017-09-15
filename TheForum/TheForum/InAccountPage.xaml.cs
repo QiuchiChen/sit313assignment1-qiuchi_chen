@@ -35,38 +35,6 @@ namespace TheForum
             bodyEntry.SetBinding(Entry.TextProperty, "Body");
 
 
-   //         var table = new TableView
-   //         {
-   //             BackgroundColor = Color.White,
-   //             Intent = TableIntent.Form,
-
-   //             Root = new TableRoot("Table Title") {
-   //                 new TableSection ("User&title") {
-
-   //                  new TextCell (){
-   //                         Detail = "Name",
-   //                         Text = "admin",
-
-   //                         TextColor = Color.NavajoWhite
-			//			},
-			//		new EntryCell {
-			//				Label = "Title:",
-			//				Placeholder = "Enter the title here",
-			//				Keyboard = Keyboard.Default
-			//			}
-			//		},
-			//		new TableSection ("Main Body") {
-			//		new EntryCell {
-			//				Label = "Body:",
-			//				Placeholder = "Enter the body here",
-			//				Keyboard = Keyboard.Telephone
-			//			},
-						
-			//		}
-			//	}
-			//};
-
-
 			Button PostButton = new Button
 			{
 				Text = "Post",
@@ -83,28 +51,36 @@ namespace TheForum
                 string title = titleEntry.Text;
                 string body = bodyEntry.Text;
 
+
+                UserWebRequest request = new UserWebRequest();
+                string afterRequest = await request.GetPost();
                 Items item = new Items(title , body,"qiuchi");
                 JsonString jstring = new JsonString();
-                List<Items> items = new List<Items>();
-                items.Add(item);
-                string list = jstring.ConvertToJson(items);
-                UserWebRequest request = new UserWebRequest();
 
-
-                request.SendPost(list);
-
+                if(afterRequest != null){
+                    
+                    string post = jstring.ToJsonString(item);
+                    request.SendPost(post);
+                }else{
+				
+					List<Items> items = new List<Items>();
+					items.Add(item);
+					string list = jstring.ConvertToJson(items);
+					request.SendPost(list);
+                }
 
 				await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
 
 				{
 					Children = {
 					 new TheForumPage (),
-                     //new LoginPage() ,
-                   
-                    new settings(),
+
+					new settings(),
 
 				}
 				}));
+
+			
 			}
 			Content = new StackLayout
 			{

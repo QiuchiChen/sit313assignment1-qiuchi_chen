@@ -7,9 +7,9 @@ namespace TheForum
     public class Items
     {
         //Initialise the ojbect
-        public string Title;
-        public string Body;
-        public string Name;
+        public string Title { get; set; }
+        public string Body { get; set; }
+        public string Name { get; set; }
 
         //genarate the item 
         public Items (string title, string body, string name)
