@@ -106,6 +106,27 @@ namespace TheForum
         }
 
 
+		public async Task<string> GetUserAccount()
+		{
+			try
+			{
+                string actualUrl = url + "&action=list";
+
+				Uri uri = new Uri(actualUrl);
+				WebRequest request = WebRequest.Create(uri);
+				request.Method = "GET";
+
+				string result = await GetServerResponse(request);
+				return result;
+			}
+			catch (Exception e)
+			{
+				Debug.WriteLine(e);
+				return null;
+			}
+		}
+
+
         public static async Task<UserWebRequest> Load(string username)
 		{
 			try

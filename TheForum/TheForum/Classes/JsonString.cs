@@ -6,7 +6,7 @@ namespace TheForum
 {
     public class JsonString
     {
-        public static JsonString CreateUserFromJson(string json)
+        public JsonString CreateUserFromJson(string json)
         {
             JsonString afterJson = JsonConvert.DeserializeObject<JsonString>(json);
             return afterJson;

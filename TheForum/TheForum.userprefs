@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{0314AB06-7AD3-4540-AD84-F847EA2D7EF3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TheForum/UserWebRequest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheForum/LoginPage.xaml.cs">
     <Files>
-      <File FileName="TheForum/InAccountPage.xaml.cs" Line="81" Column="9" />
-      <File FileName="TheForum/UserWebRequest.cs" Line="96" Column="26" />
+      <File FileName="TheForum/InAccountPage.xaml.cs" Line="55" Column="37" />
+      <File FileName="TheForum/UserWebRequest.cs" Line="128" Column="9" />
+      <File FileName="TheForum/LoginPage.xaml.cs" Line="117" Column="60" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.TheForum.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B44B7274-348C-4C50-9BFD-185C3CF1E709" />
+  <MonoDevelop.Ide.ItemProperties.TheForum.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1A7E80E3-C447-4BCB-914B-34A14AEF28BA" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

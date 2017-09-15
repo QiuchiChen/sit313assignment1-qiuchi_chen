@@ -11,9 +11,6 @@ using Xamarin.Forms;
 
 namespace TheForum
 {
-
-
-
     public partial class LoginPage : ContentPage
     {
         Entry username, password;
@@ -32,9 +29,6 @@ namespace TheForum
                 FontAttributes = FontAttributes.Bold,
                 TextColor = Color.NavajoWhite,
                 FontSize = 35
-
-
-
             };
 
             //make the text input for username by enrty
@@ -109,33 +103,50 @@ namespace TheForum
         async void loggedIn(object sender, EventArgs e)
         {
 
+            string usernameEntered = username.Text;
+            string passwordEntered = password.Text;
 
-            UserWebRequest myLoginInof = await UserWebRequest.Load(username.Text);
+            UserWebRequest myLoginInof = await UserWebRequest.Load(usernameEntered);
 
-            var user = myLoginInof.username;
-            var pass = myLoginInof.password;
+            string user = myLoginInof.username;
+            string pass = myLoginInof.password;
 
-            if (user == username.Text && pass == password.Text)
-            {   // Logged in and move to new page
-                await DisplayAlert("Login sucsses", "Username: " + user + " Password: " + pass, "Ok");
+            UserWebRequest userList = new UserWebRequest();
+            string checkUser = await userList.GetUserAccount();
 
-                await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
+            if (checkUser.Contains(usernameEntered + ".user")){
 
-                {
-                    Children = {
-                     new TheForumPage (),
-                     new settings(),
+				if (user == usernameEntered && pass == passwordEntered)
+				{
+
+					// Logged in and move to new page
+					await DisplayAlert("Login sucsses", "Username: " + user + " Password: " + pass, "Ok");
+
+					await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
+
+					{
+						Children = {
+					 new TheForumPage (),
+					 new settings(),
+
+				}
+					}));
+
+				}
+				else
+				{
+					//Show Alert for error check
+					await DisplayAlert("Login Failed", "You have entered incorrect username or password, Please try again.", "Ok");
+				}
 
 
-                }
-                }));
+
+            }else{
+
+                   await DisplayAlert("Login Failed", "You have entered incorrect username or password, Please try again.", "Ok");
             }
 
-            else
-            {
-                //Show Alert for error check
-                await DisplayAlert("Login Failed", "You have entered incorrect username or password, Please try again.", "Ok");
-            }
+           
         }
 
         //Move to the RegisterPage
