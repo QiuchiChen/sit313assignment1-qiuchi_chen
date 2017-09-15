@@ -107,9 +107,6 @@ namespace TheForum
         }
 
 
-    
-
-
         public static async Task<UserWebRequest> Load(string username)
 		{
 			try

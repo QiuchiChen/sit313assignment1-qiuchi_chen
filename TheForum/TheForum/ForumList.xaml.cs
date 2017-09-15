@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 using Xamarin.Forms;
 
@@ -9,13 +8,12 @@ namespace TheForum
     public partial class ForumList : ContentPage
     {
         ListView listView;
-
+       
 		public class CustomCell : ViewCell
 		{
 			public CustomCell()
 			{
 				//instantiate each of our views
-				var image = new Image();
 				StackLayout cellWrapper = new StackLayout();
 				StackLayout horizontalLayout = new StackLayout();
 				Label left = new Label();
@@ -23,8 +21,7 @@ namespace TheForum
 
 				//set bindings
 				left.SetBinding(Label.TextProperty, "Title");
-				right.SetBinding(Label.TextProperty, "Body");
-				image.SetBinding(Image.SourceProperty, "image");
+				right.SetBinding(Label.TextProperty, "Name");
 
 				//Set properties for desired design
                 cellWrapper.BackgroundColor = Color.Snow;
@@ -34,7 +31,6 @@ namespace TheForum
                 right.TextColor = Color.Silver;
 
 				//add views to the view hierarchy
-				horizontalLayout.Children.Add(image);
 				horizontalLayout.Children.Add(left);
 				horizontalLayout.Children.Add(right);
 				cellWrapper.Children.Add(horizontalLayout);
@@ -43,9 +39,29 @@ namespace TheForum
 		}
 
 
+        public async void LoadData()
+        {
+            //Load the json from datastore
+            UserWebRequest request = new UserWebRequest();
+            string afterRequest = await request.GetPost();
+
+
+
+			var topic = new[]{
+                
+                new {afterRequest}
+            };
+
+
+            listView.ItemsSource = topic;
+
+        }
+
         public ForumList()
         {
             InitializeComponent();
+
+            LoadData();
 
 			var label = new Label
 			{
@@ -55,7 +71,11 @@ namespace TheForum
 
 			};
 
+            //var topic = new[]{
 
+            //    new {Title="Hihihihihih",Name="ohhh"}
+          
+            //};
 
 
 
@@ -77,16 +97,6 @@ namespace TheForum
             };
 
         }
-
-		protected override async void OnAppearing()
-		{
-			base.OnAppearing();
-			UserWebRequest request = new UserWebRequest();
-			string afterRequest = await request.GetPost();
-			JsonString jstring = new JsonString();
-            Debug.
-			listView.ItemsSource = jstring.ConvertToList(afterRequest);
-		}
 
         async  void topicDetails(object seneder, SelectedItemChangedEventArgs e){
 

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace TheForum
@@ -11,20 +12,20 @@ namespace TheForum
             return afterJson;
         }
 
-        public string ToJsonString(Items item)
+        public string ToJsonString(Items i)
         {
-            return JsonConvert.SerializeObject(item);
+            return JsonConvert.SerializeObject(i);
         }
 
-        public List<Items> ConvertToList(string item)
+        public List<Items> ConvertToList(string i)
         {
-            List<Items> items = JsonConvert.DeserializeObject<List<Items>>(item);
+            List<Items> items = JsonConvert.DeserializeObject<List<Items>>(i);
             return items;
         }
 
-        public string ConvertToJson(List<Items> item)
+        public string ConvertToJson(List<Items> i)
         {
-            string items = JsonConvert.SerializeObject(item);
+            string items = JsonConvert.SerializeObject(i);
             return items;
         }
     }

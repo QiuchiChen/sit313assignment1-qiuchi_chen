@@ -12,7 +12,8 @@ namespace TheForum
         public string Name;
 
         //genarate the item 
-        public Items (string title, string body, string name){
+        public Items (string title, string body, string name)
+        {
             this.Title = title;
             this.Body = body;
             this.Name = name;
