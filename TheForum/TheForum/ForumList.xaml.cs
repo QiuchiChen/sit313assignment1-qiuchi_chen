@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 using Xamarin.Forms;
 
@@ -8,7 +9,7 @@ namespace TheForum
     public partial class ForumList : ContentPage
     {
         ListView listView;
-       
+
 		public class CustomCell : ViewCell
 		{
 			public CustomCell()
@@ -21,8 +22,8 @@ namespace TheForum
 				Label right = new Label();
 
 				//set bindings
-				left.SetBinding(Label.TextProperty, "title");
-				right.SetBinding(Label.TextProperty, "detail");
+				left.SetBinding(Label.TextProperty, "Title");
+				right.SetBinding(Label.TextProperty, "Body");
 				image.SetBinding(Image.SourceProperty, "image");
 
 				//Set properties for desired design
@@ -54,23 +55,7 @@ namespace TheForum
 
 			};
 
-            var topic = new[]{
 
-                new {title="Hihihihihih",detail="ohhh"},
-                new {title="Hihihihihi",detail="ohhh"},
-                new {title="Hihihihi",detail="ohhh"},
-                new {title="Hihihihihih",detail="ohhh"},
-                new {title="Hhihihihi",detail="ohhh"},
-                new {title="Hhidqwdqwdwqdqwd",detail="ohhh"},
-                new {title="Hhihihihihi",detail="ohhh"},
-                new {title="Hhiqwdqwdqwd",detail="ohhh"},
-                new {title="Hhiqwdwqdqw",detail="ohhh"},
-                new {title="Hhiasdsadsadsad",detail="ohhh"},
-                new {title="Hhiadsdasdasdasd",detail="ohhh"},
-                new {title="Hhiasdasdsa",detail="ohhh"},
-                new {title="Hhiasdasds",detail="ohhh"}
-                
-            };
 
 
 
@@ -78,7 +63,6 @@ namespace TheForum
             {
                 BackgroundColor = Color.Snow,
                 RowHeight = 60,
-                ItemsSource = topic,
 				ItemTemplate = new DataTemplate(typeof(CustomCell))
                     
 		
@@ -93,6 +77,16 @@ namespace TheForum
             };
 
         }
+
+		protected override async void OnAppearing()
+		{
+			base.OnAppearing();
+			UserWebRequest request = new UserWebRequest();
+			string afterRequest = await request.GetPost();
+			JsonString jstring = new JsonString();
+            Debug.
+			listView.ItemsSource = jstring.ConvertToList(afterRequest);
+		}
 
         async  void topicDetails(object seneder, SelectedItemChangedEventArgs e){
 

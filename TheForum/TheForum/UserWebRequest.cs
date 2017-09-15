@@ -67,6 +67,49 @@ namespace TheForum
 
 		}
 
+        public async void SendPost(string post)
+        {
+			try
+			{
+				string actualUrl = url + "&action=append&objectid=car"  + ".topic" + "&data=" + post;
+
+				Uri uri = new Uri(actualUrl);
+				WebRequest request = WebRequest.Create(uri);
+				request.Method = "GET";
+
+				await GetServerResponse(request);
+			}
+			catch (Exception e)
+			{
+				Debug.WriteLine(e);
+			}
+        }
+
+        public async Task<string>GetPost()
+        {
+			try
+			{
+                string actualUrl = url + "&action=load&objectid=car" + ".topic";
+
+				Uri uri = new Uri(actualUrl);
+				WebRequest request = WebRequest.Create(uri);
+				request.Method = "GET";
+
+			    string result =	await GetServerResponse(request);
+                return result;
+			}
+			catch (Exception e)
+			{
+				Debug.WriteLine(e);
+                return null;
+			}
+            
+        }
+
+
+    
+
+
         public static async Task<UserWebRequest> Load(string username)
 		{
 			try
