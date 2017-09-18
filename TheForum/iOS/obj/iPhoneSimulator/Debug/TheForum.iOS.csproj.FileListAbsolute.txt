@@ -187,6 +187,7 @@
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/steam.png
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/shop.png
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/icon.png
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/loadingsky.png
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/obj/iPhoneSimulator/Debug/TheForum.iOS.csprojResolveAssemblyReference.cache
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/obj/iPhoneSimulator/Debug/TheForum.iOS.csproj.CoreCompileInputs.cache
