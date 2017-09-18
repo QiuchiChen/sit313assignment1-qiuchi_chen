@@ -24,7 +24,7 @@ namespace TheForum
 
                         new TextCell {
                             Detail = "Name",
-                            Text = "admin",
+                            Text = "qiuchi",
                             TextColor = Color.NavajoWhite
                         },
 

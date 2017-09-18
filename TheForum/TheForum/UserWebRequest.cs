@@ -1,5 +1,6 @@
 ﻿using System;
 
+using System.Text;
 using System.IO;
 using System.Net;
 using Newtonsoft.Json;
@@ -43,6 +44,16 @@ namespace TheForum
 		{
 			this.username = username;
 			this.password = password;
+		}
+
+	
+        //security SHA
+		public string SHA256Hash(string input)
+		{
+			byte[] sign_byte = Encoding.UTF8.GetBytes(input);
+			var sha2 = SHA256.Create();
+			sign_byte = sha2.ComputeHash(sign_byte);
+			return Encoding.UTF8.GetString(sign_byte);
 		}
      
 		public async void Save()

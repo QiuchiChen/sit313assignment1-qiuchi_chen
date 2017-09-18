@@ -123,6 +123,7 @@ namespace TheForum
 					await DisplayAlert("Login sucsses", "Username: " + user + " Password: " + pass, "Ok");
 
 					await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
+                                                                       
 
 					{
 						Children = {

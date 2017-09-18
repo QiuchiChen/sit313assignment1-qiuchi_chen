@@ -7,14 +7,22 @@ namespace TheForum
 {
     public partial class InAccountPage : ContentPage
     {
-        Label nameText;
+        Label hint,nameText;
         Entry titleEntry, bodyEntry;
 
         public InAccountPage()
+
         {
+            
             InitializeComponent();
             BackgroundColor = Color.Black;
+            hint = new Label
+			{
+				Text = "Enter the title and body then press post!!",
+				TextColor = Color.White,
+				BackgroundColor = Color.Silver,
 
+			};
             nameText = new Label
             {
                 Text = "qiuchi"
@@ -86,7 +94,7 @@ namespace TheForum
 			{
 				Padding = 30,
 				Spacing = 30,
-                Children = { nameText,titleEntry,bodyEntry, PostButton }
+                Children = { hint,nameText,titleEntry,bodyEntry, PostButton }
 			};
 		}
     }
