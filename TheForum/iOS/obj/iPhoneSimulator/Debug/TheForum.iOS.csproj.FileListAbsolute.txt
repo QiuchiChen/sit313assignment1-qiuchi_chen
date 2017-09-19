@@ -193,3 +193,10 @@
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/obj/iPhoneSimulator/Debug/TheForum.iOS.csproj.CoreCompileInputs.cache
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/obj/iPhoneSimulator/Debug/TheForum.iOS.exe
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/obj/iPhoneSimulator/Debug/TheForum.iOS.pdb
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/bin/iPhoneSimulator/Debug/SQLite-net.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.batteries_green.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.batteries_v2.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.core.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.provider.sqlite3.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/bin/iPhoneSimulator/Debug/SQLite-net.pdb
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/iOS/bin/iPhoneSimulator/Debug/SQLite-net.xml

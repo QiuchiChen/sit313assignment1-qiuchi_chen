@@ -7,9 +7,14 @@ namespace TheForum
 {
     public partial class settings : ContentPage
     {
-        
+
+        Label usernamelabel;
+
         public settings()
         {
+
+            //GetUser();
+
 			InitializeComponent();
 
 			Title = "User Center";
@@ -23,8 +28,18 @@ namespace TheForum
 				FontAttributes = FontAttributes.Bold,
 				TextColor = Color.NavajoWhite,
 				FontSize = 35
-
 			};
+
+		  usernamelabel = new Label
+			{
+				HorizontalOptions = LayoutOptions.Center,
+				FontAttributes = FontAttributes.Bold,
+				TextColor = Color.White,
+				FontSize = 30
+			};
+
+
+           
 
             //create the New Post button
             Button NewpostButton = new Button
@@ -58,18 +73,24 @@ namespace TheForum
 			{
 				Padding = 20,
 				Spacing = 80,
-                Children = { TitleLabel, NewpostButton,logoutButton   }
+                Children = { TitleLabel,usernamelabel,NewpostButton,logoutButton   }
 			};
 
 
 			async void loggedout(object sender, EventArgs e)
 			{
-                await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
 
+                //var data = (DataTable)BindingContext;
+                //await App.Database.DeleteItemAsync(data);
+
+               App.Database.DropTable();
+
+                await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
 				{
+                    BindingContext = new DataTable() ,
 					Children = {
-					 new TheForumPage (),
-					 new LoginPage() ,
+					 new TheForumPage (){ BindingContext = new DataTable() },
+                        new LoginPage(){BindingContext = new DataTable() } ,
                    
                     //new settings(),
 
@@ -83,7 +104,14 @@ namespace TheForum
 				await Navigation.PushAsync(new InAccountPage());
 			}
 
+            GetUser();
 
+		}
+
+		public async void GetUser()
+		{
+			DataTable data = await App.Database.LoadUser();
+			usernamelabel.Text = data.username;
 		}
     }
 }

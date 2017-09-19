@@ -44,6 +44,7 @@
 /Users/Zhe/Desktop/TheForum的副本/TheForum/obj/Debug/TheForum.ForumList.xaml.g.cs
 /Users/Zhe/Desktop/TheForum的副本/TheForum/obj/Debug/TheForum.dll
 /Users/Zhe/Desktop/TheForum的副本/TheForum/obj/Debug/TheForum.pdb
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.csprojResolveAssemblyReference.cache
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.csproj.CoreCompileInputs.cache
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.App.xaml.g.cs
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.TheForumPage.xaml.g.cs
@@ -70,4 +71,9 @@
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/Xamarin.Forms.Xaml.pdb
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/Xamarin.Forms.Xaml.dll.mdb
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/Xamarin.Forms.Xaml.xml
-/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.csprojResolveAssemblyReference.cache
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SQLite-net.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SQLitePCLRaw.batteries_green.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SQLitePCLRaw.batteries_v2.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SQLitePCLRaw.core.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SQLite-net.pdb
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SQLite-net.xml

@@ -23,6 +23,16 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
+	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/sqlite-net-pcl.1.4.118/lib/netstandard1.1/SQLite-net.dll \
+	-r \
+	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/SQLitePCLRaw.bundle_green.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll \
+	-r \
+	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/SQLitePCLRaw.bundle_green.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll \
+	-r \
+	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/SQLitePCLRaw.core.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.core.dll \
+	-r \
+	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
@@ -314,6 +324,16 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XmlDocument.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
+	-r \
+	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/sqlite-net-pcl.1.4.118/lib/netstandard1.1/SQLite-net.dll \
+	-r \
+	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/SQLitePCLRaw.bundle_green.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll \
+	-r \
+	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/SQLitePCLRaw.bundle_green.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll \
+	-r \
+	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/SQLitePCLRaw.core.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.core.dll \
+	-r \
+	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/packages/SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll \
 	-r \
 	/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/TheForum.dll \
 	-r \

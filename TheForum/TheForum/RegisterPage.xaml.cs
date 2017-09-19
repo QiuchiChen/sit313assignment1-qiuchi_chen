@@ -111,9 +111,10 @@ namespace TheForum
 				await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
 
 				{
+                    BindingContext = new DataTable(),
 					Children = {
-					  new TheForumPage (),
-					  new LoginPage() ,
+					  new TheForumPage (){ BindingContext = new DataTable() },
+					  new LoginPage(){ BindingContext = new DataTable() } ,
 
 
 				}

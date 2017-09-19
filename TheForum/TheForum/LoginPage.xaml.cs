@@ -37,6 +37,8 @@ namespace TheForum
                 Placeholder = "Username",
                 HeightRequest = 35,
             };
+            username.SetBinding(Entry.TextProperty, "username");
+
 
             //make text input for password by create an enrty
             password = new Entry
@@ -45,7 +47,7 @@ namespace TheForum
                 HeightRequest = 35,
                 IsPassword = true
             };
-
+			password.SetBinding(Entry.TextProperty, "password");
 
             //Make the inputbox as the backgroud for 2 text input entry
             Frame inputbox = new Frame
@@ -64,7 +66,7 @@ namespace TheForum
 
             };
 
-            ////Create login button
+            //Create login button
             Button loginButton = new Button
             {
                 Text = "Login",
@@ -77,7 +79,7 @@ namespace TheForum
             loginButton.Clicked += loggedIn;
 
 
-            //Make the login button
+            //Make the signin button
             Button SignupButton = new Button
             {
                 Text = "Do not have an account?",
@@ -122,13 +124,17 @@ namespace TheForum
 					// Logged in and move to new page
 					await DisplayAlert("Login sucsses", "Username: " + user + " Password: " + pass, "Ok");
 
-					await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
-                                                                       
 
-					{
-						Children = {
-					 new TheForumPage (),
-					 new settings(),
+                    var data = (DataTable)BindingContext;
+                    await App.Database.SaveItemAsync(data);
+
+                    await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
+
+
+                    {
+                        Children = {
+                             new TheForumPage (){ BindingContext = new DataTable() },
+                            new settings(){BindingContext = new DataTable()},
 
 				}
 					}));

@@ -1,8 +1,15 @@
 ﻿<Properties StartupConfiguration="{0314AB06-7AD3-4540-AD84-F847EA2D7EF3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="packages/Xamarin.Forms.2.3.4.270/build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheForum/InAccountPage.xaml.cs">
     <Files>
       <File FileName="iOS/LaunchScreen.storyboard" />
-      <File FileName="packages/Xamarin.Forms.2.3.4.270/build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets" Line="68" Column="32" />
+      <File FileName="packages/Xamarin.Forms.2.3.4.270/build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets" Line="70" Column="11" />
+      <File FileName="TheForum/InAccountPage.xaml.cs" Line="87" Column="75" />
+      <File FileName="TheForum/TheForumPage.xaml.cs" Line="57" Column="96" />
+      <File FileName="TheForum/settings.xaml.cs" Line="87" Column="17" />
+      <File FileName="TheForum/LoginPage.xaml.cs" Line="130" Column="21" />
+      <File FileName="iOS/Main.cs" Line="21" Column="1" />
+      <File FileName="TheForum/DataTable.cs" Line="11" Column="35" />
+      <File FileName="TheForum/DataPersistence.cs" Line="35" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.TheForum.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1A7E80E3-C447-4BCB-914B-34A14AEF28BA" />

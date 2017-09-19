@@ -1,0 +1,16 @@
+﻿using System;
+
+using Xamarin.Forms;
+using SQLite;
+
+namespace TheForum
+{
+    public class DataTable
+    {
+        [PrimaryKey, AutoIncrement]
+        public int id { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+    }
+}
+

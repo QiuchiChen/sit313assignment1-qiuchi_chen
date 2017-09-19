@@ -62,7 +62,12 @@ namespace TheForum
 
                 UserWebRequest request = new UserWebRequest();
                 string afterRequest = await request.GetPost();
-                Items item = new Items(title , body,"qiuchi");
+
+                DataTable data = await App.Database.LoadUser();
+                string user = data.username;
+
+                Items item = new Items(title , body, user);
+
                 JsonString jstring = new JsonString();
 
                 if(afterRequest != null){
@@ -80,10 +85,11 @@ namespace TheForum
 				await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
 
 				{
+                    BindingContext = new DataTable(),
 					Children = {
-					 new TheForumPage (),
+                        new TheForumPage (){ BindingContext = new DataTable()},
 
-					new settings(),
+                        new settings(){ BindingContext = new DataTable() },
 
 				}
 				}));

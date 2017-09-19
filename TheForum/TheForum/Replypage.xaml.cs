@@ -54,14 +54,16 @@ namespace TheForum
 
 			async void REPLY(object sender, EventArgs e)
 			{
+                
 				await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
 
 				{
+                    BindingContext = new DataTable(),
 					Children = {
-					 new TheForumPage (),
+					 new TheForumPage (){ BindingContext = new DataTable() },
                      //new LoginPage() ,
                    
-                    new settings(),
+                    new settings(){ BindingContext = new DataTable() },
 
 
 				}
