@@ -70,11 +70,11 @@ namespace TheForum
 
 		}
 
-        public async void SendPost(string post)
+        public async void SendPost(string post,string topic)
         {
 			try
 			{
-				string actualUrl = url + "&action=append&objectid=car"  + ".topic" + "&data=" + post;
+				string actualUrl = url + "&action=append&objectid="+ topic + ".topic" + "&data=" + post;
 
 				Uri uri = new Uri(actualUrl);
 				WebRequest request = WebRequest.Create(uri);
@@ -88,11 +88,11 @@ namespace TheForum
 			}
         }
 
-        public async Task<string>GetPost()
+        public async Task<string>GetPost(string name)
         {
 			try
 			{
-                string actualUrl = url + "&action=load&objectid=car" + ".topic";
+                string actualUrl = url + "&action=load&objectid="+ name + ".topic";
 
 				Uri uri = new Uri(actualUrl);
 				WebRequest request = WebRequest.Create(uri);

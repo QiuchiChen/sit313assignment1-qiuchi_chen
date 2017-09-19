@@ -1,4 +1,5 @@
 ﻿﻿using Xamarin.Forms;
+using System.Collections.Generic;
 
 namespace TheForum
 {
@@ -16,14 +17,62 @@ namespace TheForum
             {
                 Children = {
                      new TheForumPage (),
-                    new LoginPage(){
+                     new LoginPage(){
                         BindingContext = new DataTable()
                     } ,
                    
-                    //new settings(),
+                    //new settings()
                 }
             });
+
+
+            UserLogon();
         }
+
+
+
+
+        public async void UserLogon(){
+
+            List<DataTable> list =  await Database.GetItemsAsync();
+
+            if(list.Count ==0){
+
+				MainPage = new NavigationPage(new TabbedPage()
+
+				{
+					Children = {
+					 new TheForumPage (),
+					 new LoginPage(){
+						BindingContext = new DataTable()
+					} ,
+                   
+                    //new settings(),
+                }
+				});
+
+            }
+            else{
+
+				MainPage = new NavigationPage(new TabbedPage()
+
+				{
+					Children = {
+                        new TheForumPage () {BindingContext = new DataTable()},
+                       new settings(){
+						BindingContext = new DataTable()
+					} ,
+                   
+                    //new settings(),
+                }
+				});
+
+
+            }
+
+        }
+
+
 
 
 		public static DataPersistence Database

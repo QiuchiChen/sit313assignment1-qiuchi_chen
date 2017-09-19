@@ -8,9 +8,10 @@ namespace TheForum
     public partial class InAccountPage : ContentPage
     {
         Label hint,nameText;
-        Entry titleEntry, bodyEntry;
+        Entry titleEntry;
+        Editor bodyEntry;
 
-        public InAccountPage()
+        public InAccountPage(string TitleName)
 
         {
             
@@ -36,9 +37,9 @@ namespace TheForum
             };
             titleEntry.SetBinding(Entry.TextProperty,"Title");
 
-            bodyEntry = new Entry
+            bodyEntry = new Editor
             {
-                Placeholder = "Body"
+                HeightRequest = 238
             };
             bodyEntry.SetBinding(Entry.TextProperty, "Body");
 
@@ -61,7 +62,7 @@ namespace TheForum
 
 
                 UserWebRequest request = new UserWebRequest();
-                string afterRequest = await request.GetPost();
+                string afterRequest = await request.GetPost(TitleName);
 
                 DataTable data = await App.Database.LoadUser();
                 string user = data.username;
@@ -73,13 +74,13 @@ namespace TheForum
                 if(afterRequest != null){
                     
                     string post = jstring.ToJsonString(item);
-                    request.SendPost(post);
+                    request.SendPost(post,TitleName);
                 }else{
 				
 					List<Items> items = new List<Items>();
 					items.Add(item);
 					string list = jstring.ConvertToJson(items);
-					request.SendPost(list);
+					request.SendPost(list, TitleName);
                 }
 
 				await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()

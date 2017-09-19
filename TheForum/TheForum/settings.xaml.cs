@@ -101,7 +101,7 @@ namespace TheForum
 
 			async void Newpost(object sender, EventArgs e)
 			{
-				await Navigation.PushAsync(new InAccountPage());
+				await Navigation.PushAsync(new PostCategoryPage());
 			}
 
             GetUser();

@@ -77,3 +77,4 @@
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SQLitePCLRaw.core.dll
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SQLite-net.pdb
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SQLite-net.xml
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.PostCategoryPage.xaml.g.cs

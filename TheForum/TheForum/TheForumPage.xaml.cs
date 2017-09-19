@@ -27,9 +27,6 @@ namespace TheForum
 					HorizontalOptions = LayoutOptions.Center,
                     FontAttributes = FontAttributes.Bold,
                 },
-
-
-
 			};
 
 
@@ -54,7 +51,7 @@ namespace TheForum
 
 			async void push(object sender, EventArgs e)
 			{
-                await Navigation.PushAsync(new ForumList() { BindingContext = new DataTable() });
+                await Navigation.PushAsync(new ForumList("car") { BindingContext = new DataTable() });
 			}
 
 
@@ -70,7 +67,13 @@ namespace TheForum
 
 			};
 
-			gamegroupbutton.Clicked += push;
+			gamegroupbutton.Clicked += gamepush;
+
+			async void gamepush(object sender, EventArgs e)
+			{
+				await Navigation.PushAsync(new ForumList("game") { BindingContext = new DataTable() });
+			}
+
 
 
 			//Create shopping calss button
@@ -84,7 +87,12 @@ namespace TheForum
 
 			};
 
-			shoppinggroupbutton.Clicked += push;
+			shoppinggroupbutton.Clicked += shoppingpush;
+
+			async void shoppingpush(object sender, EventArgs e)
+			{
+				await Navigation.PushAsync(new ForumList("shopping") { BindingContext = new DataTable() });
+			}
 
 
 

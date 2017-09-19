@@ -9,6 +9,9 @@ namespace TheForum
     {
         ListView listView;
        
+
+        public string formName { get; set; }
+
 		public class CustomCell : ViewCell
 		{
 			public CustomCell()
@@ -39,21 +42,32 @@ namespace TheForum
 		}
 
 
-        public async void LoadData()
+        public async void LoadData(string TitleName)
         {
             //Load the json from datastore
             UserWebRequest request = new UserWebRequest();
-            string afterRequest = await request.GetPost();
+            string afterRequest = await request.GetPost(TitleName);
             //Json convert to list
             JsonString jstring = new JsonString();
-            //Add to listview
-            listView.ItemsSource = jstring.ConvertToList(afterRequest); ;
+
+            if (afterRequest == null){
+                
+            }else{
+				//Add to listview
+				listView.ItemsSource = jstring.ConvertToList(afterRequest);
+
+			}
+
+
+  
         }
 
-        public ForumList()
+        public ForumList(string TitleName)
         {
-         
-            LoadData();
+                LoadData(TitleName);
+
+
+
 
 			var label = new Label
 			{
@@ -99,11 +113,22 @@ namespace TheForum
 
             listView.SelectedItem = null;
 
-			await DisplayAlert("Loading", "Moving to view the detail and reply", "Ok");
-            await Navigation.PushAsync(new Replypage()
-            {
-                BindingContext = e.SelectedItem as Items
-            });
+            List<DataTable> list = await App.Database.GetItemsAsync();
+
+
+            if(list.Count == 0){
+
+                await DisplayAlert("Error", "Reply before login", "Ok");
+            }else{
+                
+				await DisplayAlert("Loading", "Moving to view the detail and reply", "Ok");
+				await Navigation.PushAsync(new Replypage()
+				{
+					BindingContext = e.SelectedItem as Items
+				});
+            }
+
+		
 		}
     }
 }
