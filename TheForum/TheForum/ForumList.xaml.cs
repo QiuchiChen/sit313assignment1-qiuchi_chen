@@ -8,9 +8,11 @@ namespace TheForum
     public partial class ForumList : ContentPage
     {
         ListView listView;
+        Label category;
        
 
         public string formName { get; set; }
+
 
 		public class CustomCell : ViewCell
 		{
@@ -66,7 +68,15 @@ namespace TheForum
         {
                 LoadData(TitleName);
 
+            category = new Label
+			{
+				HorizontalOptions = LayoutOptions.Center,
+				FontAttributes = FontAttributes.Bold,
+                TextColor = Color.Black,
+				FontSize = 30
+			};
 
+            category.Text = TitleName;
 
 
 			var label = new Label
@@ -99,9 +109,11 @@ namespace TheForum
             Content = new StackLayout
             {
                 BackgroundColor = Color.Snow,
-                Children = {label, listView}
+                Children = {category, label, listView}
             };
-
+			
+            //CALL GET category FUNCTION
+	
         }
 
         async  void topicDetails(object seneder, SelectedItemChangedEventArgs e){
@@ -116,10 +128,7 @@ namespace TheForum
             List<DataTable> list = await App.Database.GetItemsAsync();
 
 
-            if(list.Count == 0){
-
-                await DisplayAlert("Error", "Reply before login", "Ok");
-            }else{
+           // show allert before moveing page and passing data
                 
 				await DisplayAlert("Loading", "Moving to view the detail and reply", "Ok");
 				await Navigation.PushAsync(new Replypage()
@@ -127,8 +136,8 @@ namespace TheForum
 					BindingContext = e.SelectedItem as Items
 				});
             }
-
+	
 		
 		}
     }
-}
+

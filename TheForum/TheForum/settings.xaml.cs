@@ -17,6 +17,7 @@ namespace TheForum
 
 			InitializeComponent();
 
+
 			Title = "User Center";
 			BackgroundColor = Color.Black;
 
@@ -117,13 +118,13 @@ namespace TheForum
 
 			async void Mypost(object sender, EventArgs e)
 			{
-				await Navigation.PushAsync(new PostCategoryPage());
+                await Navigation.PushAsync(new UserListPage(usernamelabel.Text) { BindingContext = new DataTable() });
 			}
-
+            //CALL GET USER NAME FUNCTION
 			GetUser();
 
 		}
-
+        // The function which get the username
 		public async void GetUser()
 		{
 			DataTable data = await App.Database.LoadUser();

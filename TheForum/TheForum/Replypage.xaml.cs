@@ -18,7 +18,7 @@ namespace TheForum
             {
 				HorizontalOptions = LayoutOptions.Center,
 				FontAttributes = FontAttributes.Bold,
-				TextColor = Color.NavajoWhite,
+                TextColor = Color.NavajoWhite,
 				FontSize = 35
                
             };
@@ -27,8 +27,8 @@ namespace TheForum
 
             showbody = new Label
 			{
-				BackgroundColor = Color.Silver,
-				TextColor = Color.White,
+                BackgroundColor = Color.White,
+                TextColor = Color.Black,
 				
 			};
             showbody.SetBinding(Label.TextProperty, "Body");
@@ -73,9 +73,16 @@ namespace TheForum
             };
             PostButton.Clicked += REPLY;
 
-            async void REPLY(object sender, EventArgs e)
-            {
+			
 
+			async void REPLY(object sender, EventArgs e)
+            {
+                List<DataTable> list = await App.Database.GetItemsAsync();
+				if (list.Count == 0)
+				{
+
+					await DisplayAlert("Error", "Reply before login", "Ok");
+                }else
                 await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
 
                 {
