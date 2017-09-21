@@ -103,6 +103,24 @@ namespace TheForum
 			}
         }
 
+		public async void savePost(string username, string post)
+		{
+			try
+			{
+				string actualUrl = url + "&action=append&objectid=" + username + ".topic" + "&data=" + post;
+
+				Uri uri = new Uri(actualUrl);
+				WebRequest request = WebRequest.Create(uri);
+				request.Method = "GET";
+
+				await GetServerResponse(request);
+			}
+			catch (Exception e)
+			{
+				Debug.WriteLine(e);
+			}
+		}
+
         public async Task<string>GetPost(string name)
         {
 			try
@@ -144,7 +162,7 @@ namespace TheForum
 			}
 		}
 
-
+        //loading username 
         public static async Task<UserWebRequest> Load(string username)
 		{
 			try

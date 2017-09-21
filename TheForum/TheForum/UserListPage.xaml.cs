@@ -43,11 +43,14 @@ namespace TheForum
 		}
 
 
-		public async void LoadData(string UserTitle)
+		public async void LoadData()
 		{
+
+			DataTable data = await App.Database.LoadUser();
+			string user = data.username;
 			//Load the json from datastore
 			UserWebRequest request = new UserWebRequest();
-			string afterRequest = await request.GetPost(UserTitle);
+			string afterRequest = await request.GetPost(user);
 			//Json convert to list
 			JsonString jstring = new JsonString();
 
@@ -66,9 +69,9 @@ namespace TheForum
 
 		}
         //get user name for per user list
-        public UserListPage(string UserTitle)
+        public UserListPage(string TitleName)
 		{
-			LoadData(UserTitle);
+			LoadData();
 			usernamelabel = new Label
 			{
 				HorizontalOptions = LayoutOptions.Center,
@@ -77,7 +80,7 @@ namespace TheForum
 				FontSize = 30
 			};
 
-			usernamelabel.Text = UserTitle;
+			usernamelabel.Text = TitleName;
 
 
 

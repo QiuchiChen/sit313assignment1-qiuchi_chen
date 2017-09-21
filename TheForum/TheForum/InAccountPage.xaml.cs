@@ -26,24 +26,25 @@ namespace TheForum
 			};
             nameText = new Label
             {
-                Text = "qiuchi"
+                Text = "qiuchi",
+                TextColor = Color.NavajoWhite
             };
             nameText.SetBinding(Label.TextProperty,"Name");
 
-
+            //make the entry to enter the titile of new post
             titleEntry = new Entry
             { 
                 Placeholder = "Title"
             };
             titleEntry.SetBinding(Entry.TextProperty,"Title");
-
+            //make the entry to enter the body of the new post (as editor)
             bodyEntry = new Editor
             {
                 HeightRequest = 238
             };
             bodyEntry.SetBinding(Entry.TextProperty, "Body");
 
-
+            // post button create
 			Button PostButton = new Button
 			{
 				Text = "Post",
@@ -53,36 +54,50 @@ namespace TheForum
 				FontAttributes = FontAttributes.Bold,
 				HorizontalOptions = LayoutOptions.FillAndExpand
 			};
+            // function on post button
 			PostButton.Clicked += newpost;
 
+            //webrequest of sending to sevier
 			async void newpost(object sender, EventArgs e)
 			{
                 string title = titleEntry.Text;
                 string body = bodyEntry.Text;
 
+				List<Items> items = new List<Items>();
+
+				DataTable data = await App.Database.LoadUser();
+				string user = data.username;
 
                 UserWebRequest request = new UserWebRequest();
                 string afterRequest = await request.GetPost(TitleName);
-
-                DataTable data = await App.Database.LoadUser();
-                string user = data.username;
-
+                string checkUserPost = await request.GetPost(user);
                 Items item = new Items(title , body, user);
-
+                items.Add(item);
                 JsonString jstring = new JsonString();
 
                 if(afterRequest != null){
                     
                     string post = jstring.ToJsonString(item);
                     request.SendPost(post,TitleName);
+                
                 }else{
-				
-					List<Items> items = new List<Items>();
-					items.Add(item);
+					
 					string list = jstring.ConvertToJson(items);
 					request.SendPost(list, TitleName);
+
                 }
 
+                if(checkUserPost != null){
+                   
+                    string post = jstring.ToJsonString(item);
+					request.savePost(user, post);
+                }else{
+                    string list = jstring.ConvertToJson(items);
+                    request.savePost(user, list);
+                }
+
+
+                // navaigation control after the post 
 				await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
 
 				{
