@@ -1,5 +1,8 @@
 ﻿using System;
-
+//using EasyEncryption；
+//using Galactic.Cryptography;
+using SshNet.Security.Cryptography;
+using System.Security.Cryptography;
 using System.Text;
 using System.IO;
 using System.Net;
@@ -46,7 +49,19 @@ namespace TheForum
 			this.password = password;
 		}
 
-	
+		public string GenerateGuid()
+		{
+			return Guid.NewGuid().ToString();
+		}
+
+		/*public string SHA256Hash(string input)
+		{
+			byte[] sign_byte = Encoding.UTF8.GetBytes(input);
+			var sha2 = SHA256.Create();
+			sign_byte = sha2.ComputeHash(sign_byte);
+			return Encoding.UTF8.GetString(sign_byte);
+		}*/
+
 
 		public async void Save()
 		{

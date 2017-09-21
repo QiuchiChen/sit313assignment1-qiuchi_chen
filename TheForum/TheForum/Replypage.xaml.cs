@@ -1,18 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Text;
 using Xamarin.Forms;
 
 namespace TheForum
 {
     public partial class Replypage : ContentPage
     {
+        Label showtitle, showbody;
         public Replypage()
         {
             InitializeComponent();
-			BackgroundColor = Color.Black;
+            BackgroundColor = Color.Black;
 
-            var table = new TableView
+
+            showtitle = new Label
+            {
+				HorizontalOptions = LayoutOptions.Center,
+				FontAttributes = FontAttributes.Bold,
+				TextColor = Color.NavajoWhite,
+				FontSize = 35
+               
+            };
+            showtitle.SetBinding(Label.TextProperty, "Title");
+
+
+            showbody = new Label
+			{
+				BackgroundColor = Color.Silver,
+				TextColor = Color.White,
+				
+			};
+            showbody.SetBinding(Label.TextProperty, "Body");
+
+			var table = new TableView
             {
 
                 BackgroundColor = Color.White,
@@ -41,40 +62,40 @@ namespace TheForum
 
                 }
             };
-			Button PostButton = new Button
-			{
-				Text = "Reply",
-				TextColor = Color.White,
-				BackgroundColor = Color.Silver,
-				FontSize = 20,
-				FontAttributes = FontAttributes.Bold,
-				HorizontalOptions = LayoutOptions.FillAndExpand
-			};
-			PostButton.Clicked += REPLY;
+            Button PostButton = new Button
+            {
+                Text = "Reply",
+                TextColor = Color.White,
+                BackgroundColor = Color.Silver,
+                FontSize = 20,
+                FontAttributes = FontAttributes.Bold,
+                HorizontalOptions = LayoutOptions.FillAndExpand
+            };
+            PostButton.Clicked += REPLY;
 
-			async void REPLY(object sender, EventArgs e)
-			{
-                
-				await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
+            async void REPLY(object sender, EventArgs e)
+            {
 
-				{
+                await Navigation.PushModalAsync(new NavigationPage(new TabbedPage()
+
+                {
                     BindingContext = new DataTable(),
-					Children = {
-					 new TheForumPage (){ BindingContext = new DataTable() },
+                    Children = {
+                     new TheForumPage (){ BindingContext = new DataTable() },
                      //new LoginPage() ,
                    
-                    new settings(){ BindingContext = new DataTable() },
+                    new settings(){ BindingContext = new DataTable() }
 
 
-				}
-				}));
-			}
-			Content = new StackLayout
-			{
-				Padding = 30,
-				Spacing = 30,
-				Children = { table, PostButton }
-			};
+                }
+                }));
+            }
+            Content = new StackLayout
+            {
+                Padding = 30,
+                Spacing = 30,
+                Children = { showtitle, showbody,table, PostButton }
+            };
         }
     }
 }

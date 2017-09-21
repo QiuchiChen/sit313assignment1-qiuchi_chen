@@ -52,7 +52,7 @@ namespace TheForum
 			{
 				Text = "SHOPPING",
 				TextColor = Color.White,
-				BackgroundColor = Color.Red,
+                BackgroundColor = Color.Silver,
 				FontSize = 20,
 				FontAttributes = FontAttributes.Bold,
 				HorizontalOptions = LayoutOptions.FillAndExpand

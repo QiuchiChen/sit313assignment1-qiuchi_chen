@@ -53,6 +53,17 @@ namespace TheForum
             };
             NewpostButton.Clicked += Newpost;
 
+			//create mypost button to View a list of all posts per user
+			Button MypostButton = new Button
+			{
+				Text = "My post",
+				TextColor = Color.White,
+				BackgroundColor = Color.Silver,
+				FontSize = 20,
+				FontAttributes = FontAttributes.Bold,
+				HorizontalOptions = LayoutOptions.FillAndExpand
+			};
+			MypostButton.Clicked += Mypost;
 
 		//Create logout button
 			Button logoutButton = new Button
@@ -72,8 +83,8 @@ namespace TheForum
 			Content = new StackLayout
 			{
 				Padding = 20,
-				Spacing = 80,
-                Children = { TitleLabel,usernamelabel,NewpostButton,logoutButton   }
+				Spacing = 60,
+                Children = { TitleLabel,usernamelabel,NewpostButton,MypostButton,logoutButton   }
 			};
 
 
@@ -104,7 +115,12 @@ namespace TheForum
 				await Navigation.PushAsync(new PostCategoryPage());
 			}
 
-            GetUser();
+			async void Mypost(object sender, EventArgs e)
+			{
+				await Navigation.PushAsync(new PostCategoryPage());
+			}
+
+			GetUser();
 
 		}
 

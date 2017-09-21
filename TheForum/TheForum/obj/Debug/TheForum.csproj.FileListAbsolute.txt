@@ -78,3 +78,10 @@
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SQLite-net.pdb
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SQLite-net.xml
 /Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.PostCategoryPage.xaml.g.cs
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/obj/Debug/TheForum.UserListPage.xaml.g.cs
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/EasyEncryption.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/Galactic.Cryptography.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/mscorlib.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SshNet.Security.Cryptography.dll
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/Galactic.Cryptography.xml
+/Users/chenqiuchi/Documents/GitHub/sit313assignment1-qiuchi_chen/TheForum/TheForum/bin/Debug/SshNet.Security.Cryptography.xml
